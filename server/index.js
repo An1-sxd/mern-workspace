@@ -7,6 +7,7 @@ import {
   deleteStudent,
   getStudent,
   getStudents,
+  updateStudent,
 } from "./controllers/student.controller.js";
 
 dotenv.config(); // must be at the very top
@@ -32,6 +33,7 @@ app.get("/api/students", getStudents);
 app.get("/api/students/:id", getStudent);
 app.post("/api/students", addStudent);
 app.delete("/api/students/:id", deleteStudent);
+app.put("/api/students/:id", updateStudent);
 
 app.listen(PORT, () =>
   console.log(`Server running on http://localhost:${PORT}`)
